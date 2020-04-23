@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <h1>Race Game</h1>
+
+    <script>
+      let raceNumber = Math.floor(Math.random() * 1000);
+      let earlyRegisteredRunner = true;
+      let age = 21;
+
+      if (age > 18 && earlyRegisteredRunner) {
+        raceNumber += 1000;
+      }
+
+      if (age > 18 && earlyRegisteredRunner) {
+        console.log(
+          `Your race number is ${raceNumber} and you\'ll race at 9:30`
+        );
+      } else if (age > 18 && !earlyRegisteredRunner) {
+        console.log(
+          `Your race number is ${raceNumber} and you\'ll race at 11:00`
+        );
+      } else if (age < 18) {
+        console.log(
+          `Youth registrants run at 12:30 pm (regardless of registration). Your race number is ${raceNumber} and you\'ll race at 12:30`
+        );
+      } else {
+        console.log(`Kindly check the registration desk for more information`);
+      }
+    </script>
+  </body>
+</html>
